@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const profil = {
+      nom: "Alice",
+      age: 25,
+      ville: "Paris",
+      centresInteret: ["musée", "rando", "cuisine"],
+    }
+    console.log(profil.nom)                // "Alice"
+    console.log(profil["ville"])           // "Paris"
+    console.log(profil.centresInteret[0])
+    profil.age = 26
+    profil.email = "alice@example.com"
+    console.log(profil.age)
+    const { nom, age, ville } = profil
+    console.log(nom, age, ville)
+    const { nom: prenom, ville: residence } = profil
+    console.log(prenom, residence)
+    const [premierInteret] = profil.centresInteret
+    console.log(premierInteret)
+
+  </script>
+</body>
+
+</html>
