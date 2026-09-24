@@ -8,9 +8,25 @@
 </head>
 
 <body>
-  <Script>
-    const utilisateur
-  </Script>
+  <p id="sortie"></p>
+  <script>
+    const utilisateur = { nom, age, ville }
+    class Profil {
+      constructor(user) {
+        this.user = user
+      }
+
+      afficher() {
+        const { nom, age, ville } = this.user
+        return `Je m'appelle ${nom}, j'ai ${age} et je vis a ${ville}`
+      }
+    }
+
+    const profil = new Profil(utilisateur)
+    document.querySelector("#sortie").textContent = profil.afficher()
+
+    let nom: string = 'Kylian'
+  </script>
 </body>
 
 </html>
